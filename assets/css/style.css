@@ -2,16 +2,16 @@
 /* --- 1. Variables (Modern Tech Palette) --- */
 :root {
     /* This template uses a professional "Modern Tech" color scheme. */
-    --primary-color: #1A2A4C;   /* Midnight Blue */
-    --secondary-color: #3D5A80; /* Slate Blue */
-    --accent-color: #29B6F6;    /* Vivid Sky Blue */
+    --primary-color: #6B1F2B;   /* Midnight Blue */
+    --secondary-color: #8C3A45; /* Slate Blue */
+    --accent-color: #C97C5D;    /* Vivid Sky Blue */
 
     /* --- Shared Variables (These usually don't need to change) --- */
-    --light-bg-color: #F8F9FA;
+    --light-bg-color: #FDF6F0;
     --white-color: #ffffff;
     --dark-text-color: #343A40;
     --light-text-color: #6c757d;
-    --card-bg-color: #ffffff;
+    --card-bg-color: #FDF6F0;
     
     /* Fonts */
     --font-heading: 'Playfair Display', serif;
@@ -98,7 +98,7 @@ header p {
 
 /* --- 4. Navigation --- */
 nav {
-    background-color: rgba(26, 42, 76, 0.95); /* Adjusted for new primary color */
+    background-color: rgba(107, 31, 43, 0.95); /* Adjusted for new primary color */
     backdrop-filter: blur(5px);
     position: sticky;
     top: 0;
