@@ -1,61 +1,53 @@
 # Udo Mary Imeabasi - Data Science Portfolio
 
-Welcome! This repository contains the complete template for a professional, one-page data analysis portfolio website, hosted for free on GitHub Pages.
+This repository hosts my data science portfolio. Feel free to explore and see how I use data to solve real-world problems, build predictive models, and uncover insights that drive decisions.
 
-## About This Portfolio Template
+## About My Portfolio
 
-This portfolio is designed to demonstrate skills in:
-- Data visualization and storytelling
-- Data modeling and analysis
-- Creating interactive, professional dashboards
-- Transforming complex data into actionable insights
+This portfolio showcases my work across data analysis, machine learning, and predictive modeling. Each project is built around a real problem, focusing not just on tools, but on impact.
 
-## 🚀 Projects
+Here, you’ll find projects where I:
 
-This template is set up to showcase your best work. You can easily customize the project cards in the `index.html` file.
+  - Analyze complex datasets to uncover meaningful patterns  
+  - Build machine learning models to predict outcomes  
+  - Translate data into insights that support decision-making  
+  - Approach problems with curiosity, structure, and real-world context 
 
-### Project Title One
-*A brief description of your project, the tools used, and the key insights derived.*
+## Projects
 
-### Project Title Two
-*A brief description of your project, the tools used, and the key insights derived.*
+Here are some of the projects that reflect my approach to problem-solving with data:
 
-### Project Title Three
-*A brief description of your project, the tools used, and the key insights derived.*
+### 🔹 Healthcare Predictive Analytics & Patient Segmentation  
+Built a predictive model to identify patient no-shows and improve appointment efficiency, combining data analysis, feature engineering, and machine learning.
 
+### 🔹 Waste Image Classification (CNN)  
+Developed a convolutional neural network to classify waste into categories, supporting smarter waste management and sustainability efforts.
 
-## 🛠️ Skills
+### 🔹 Financial Data Analysis (SQL)  
+Analyzed customer behavior, transaction frequency, and lifetime value to uncover insights that support business decision-making in a financial context.
 
-Update the `index.html` file to reflect your personal technical skillset. The template is organized into key categories:
+### 🔹 Patient Data Analysis (SQL)  
+Explored patient records to identify trends in diagnoses, treatment patterns, and billing, enabling better understanding of healthcare data.
 
-- **Data Visualization**: Power BI, Tableau, Matplotlib, etc.
-- **Data Analysis**: SQL, Python (Pandas), R, Excel, etc.
-- **Data Modeling**: Power Query, DAX, Star Schema Design, etc.
-- **Tools**: List any other relevant tools like Power BI Service, specific cloud platforms, etc.
+## Technical Skills
 
-## 💡 How to Use This Template
+- **Programming & Analysis:** Python (Pandas, NumPy, Scikit-learn), SQL  
+- **Machine Learning:** Classification Models, Predictive Modeling, K-Means Clustering  
+- **Data Techniques:** EDA, Feature Engineering, Model Evaluation, Hyperparameter Tuning  
+- **Data Handling:** Data Cleaning, Transformation, Handling Imbalanced Data (SMOTE)  
+- **Visualization:** Power BI, Data Storytelling, Dashboard Development  
 
-Creating your own portfolio from this template is a simple, four-step process.
+## Currently Learning
 
-### 1. Create a New Repository from this Template
-Click the green **"Use this template"** button at the top of this repository page, then select **"Create a new repository"**.
+- Machine Learning for Healthcare  
+- AWS Machine Learning & AI  
+- Advanced Data Science Techniques  
 
-### 2. Name Your Repository for GitHub Pages
-This is the most important step. To turn your portfolio into a live website, you **must** name your new repository in the following format:
-`your-username.github.io`
-*(Replace `your-username` with your actual GitHub username.)*
+## Portfolio
 
-### 3. Customize Your Portfolio
-Open the `index.html` file and begin personalizing it. The file contains helpful `<!--💡UPDATE: ... -->` comments to guide you on where to change:
-- Your name and title
-- Social media links
-- The "About Me" section
-- Your project titles, descriptions, and links
-- Your list of skills
+[Check Out My Full Portfolio Website](https://marygit-24.github.io/)
 
-### 4. Add Your Files
-- Upload your profile photo and project preview images to the `assets/images/` folder.
-- Upload your CV (e.g., in PDF format) to the `assets/` folder.
-- Create your favicon and add it to the root folder.
+## Let’s Connect
 
-Once you commit your changes, your new portfolio website will be live at `https://your-username.github.io` within a few minutes!
+- [LinkedIn](https://linkedin.com/in/udomary)
+- [GitHub](https://github.com/MaryGit-24)
