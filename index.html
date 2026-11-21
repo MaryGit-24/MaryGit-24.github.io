@@ -71,7 +71,7 @@ nav ul a:hover{color:var(--gold)}
 .tag{font-size:13px;padding:4px 12px;border-radius:999px;background:rgba(255,196,110,.1);color:var(--gold);border:1px solid rgba(255,196,110,.25)}
 
 /* project grid */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
 .card:hover{transform:translateY(-4px);border-color:var(--orange)}
 .card img{aspect-ratio:16/10;object-fit:cover;width:100%;background:#fff}
@@ -196,7 +196,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 <section id="projects">
   <div class="wrap">
     <div class="kicker">Selected work</div>
-    <h2>Health data and machine learning</h2>
+    <h2>Health data, machine learning and vision</h2>
     <p class="lead">My background is in health education, so I care most about models a clinic or a care team could actually act on.</p>
     <div class="grid">
 
@@ -240,7 +240,18 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
         </div>
       </div>
 
-      <!-- ADD LATER: a card for the NECA ICT computer vision course repo once it is on GitHub -->
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/MaryGit-24/computer-vision-course-projects/main/images/basketball-segmentation.png" alt="Player and basketball outlined by a segmentation model" style="object-position:top">
+        <div class="body">
+          <div class="cat">Computer vision</div>
+          <h3>Computer Vision Course Projects</h3>
+          <p>Four projects from my NECA ICT course covering classification, detection and segmentation: malaria cells, basketball, players and F1 pit stop logos.</p>
+          <div class="result">Final assessment: 86.3% mAP50 detecting logos in crowded pit stop footage.</div>
+          <div class="links">
+            <a href="https://github.com/MaryGit-24/computer-vision-course-projects" target="_blank" rel="noopener">GitHub <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
 
     </div>
     <p class="more">More work, including SQL customer and financial analysis, is on <a href="https://github.com/MaryGit-24" target="_blank" rel="noopener">my GitHub</a>.</p>
