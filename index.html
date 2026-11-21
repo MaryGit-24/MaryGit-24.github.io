@@ -1,246 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--💡UPDATE: Change the title to your name-->
-    <title>Udo Mary Imeabasi | Data Science Portfolio</title>
-      
-    <!--💡UPDATE: Add your favicon here. You can generate one at realfavicongenerator.net-->
-    <link rel="icon" type="image/png" href="/My_favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/My_favicon-32x32.png">
-    
-    <!-- Google Fonts for Elegant Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- Your Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mary Imeabasi Udo | Data Scientist &amp; AI Engineer</title>
+<meta name="description" content="Mary Imeabasi Udo, Data Scientist and AI Engineer in Lagos. Computer vision, machine learning and health data projects, and AI education for young people.">
+<link rel="icon" type="image/png" href="/My_favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+:root{
+  --bg:#15121c; --bg2:#1d1826; --card:#231d2e; --line:#3a3047;
+  --text:#f4eee8; --muted:#b9adb8; --gold:#ffc46e; --orange:#ff8a3d; --rose:#e2627a;
+  --sun:linear-gradient(135deg,#ffc46e 0%,#ff8a3d 55%,#e2627a 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.15}
+h2{font-size:clamp(30px,4vw,42px);margin-bottom:12px}
+.kicker{color:var(--gold);font-weight:600;font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.lead{color:var(--muted);max-width:640px;margin-bottom:40px}
+section{padding:96px 0}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(21,18,28,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .logo{font-family:Fraunces,serif;font-weight:700;font-size:20px;text-decoration:none}
+nav .logo span{color:var(--gold)}
+nav ul{display:flex;gap:28px;list-style:none}
+nav ul a{text-decoration:none;color:var(--muted);font-size:15px;font-weight:500}
+nav ul a:hover{color:var(--gold)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:110px 0 120px;background:
+  radial-gradient(900px 500px at 85% 110%,rgba(255,138,61,.35),transparent 60%),
+  radial-gradient(700px 400px at 10% -10%,rgba(226,98,122,.18),transparent 60%),var(--bg)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.badge{display:inline-block;border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--muted);margin-bottom:24px}
+.hero h1{font-size:clamp(40px,6vw,66px);margin-bottom:12px}
+.hero .role{font-size:clamp(20px,2.4vw,24px);color:var(--gold);font-weight:600;margin-bottom:22px}
+.hero p.intro{color:var(--muted);font-size:19px;max-width:560px;margin-bottom:30px}
+.motto{font-family:Fraunces,serif;font-size:22px;margin-bottom:34px}
+.motto span{background:var(--sun);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--sun);color:#1a1220}
+.btn.ghost{border:1px solid var(--line);color:var(--text)}
+.photo{position:relative}
+.photo img{border-radius:28px;aspect-ratio:4/5;object-fit:cover;width:100%;border:1px solid var(--line)}
+.photo:before{content:"";position:absolute;inset:-14px -14px 14px 14px;border-radius:32px;background:var(--sun);opacity:.55;z-index:-1}
+
+/* featured */
+.featured{background:var(--bg2)}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:36px}
+.feat img{border-radius:18px;width:100%;aspect-ratio:1/1;object-fit:cover}
+.feat h3{font-size:30px;margin-bottom:14px}
+.feat p{color:var(--muted);margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:14px}
+.stat b{display:block;font-family:Fraunces,serif;font-size:26px;color:var(--gold)}
+.stat small{color:var(--muted);font-size:13px;line-height:1.3;display:block}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tag{font-size:13px;padding:4px 12px;border-radius:999px;background:rgba(255,196,110,.1);color:var(--gold);border:1px solid rgba(255,196,110,.25)}
+
+/* project grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--orange)}
+.card img{aspect-ratio:16/10;object-fit:cover;width:100%;background:#fff}
+.card .body{padding:22px;display:flex;flex-direction:column;flex:1}
+.card .cat{color:var(--orange);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px;margin-bottom:16px;flex:1}
+.card .result{font-size:15px;margin-bottom:18px;padding-left:12px;border-left:3px solid var(--gold)}
+.card .links{display:flex;gap:18px;font-size:14px;font-weight:600}
+.card .links a{color:var(--gold);text-decoration:none}
+.more{margin-top:28px;color:var(--muted);font-size:15px}
+.more a{color:var(--gold)}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.about blockquote{font-family:Fraunces,serif;font-size:clamp(24px,3vw,32px);line-height:1.3;border-left:4px solid var(--orange);padding-left:22px}
+.about p{color:var(--muted);margin-bottom:16px}
+.about p strong{color:var(--text);font-weight:600}
+
+/* teaching */
+.teaching{background:var(--bg2)}
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.titem{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.titem i{font-size:22px;color:var(--gold);margin-bottom:14px}
+.titem h3{font-size:20px;margin-bottom:8px}
+.titem p{color:var(--muted);font-size:15px}
+.titem img{width:100%;aspect-ratio:6/5;object-fit:cover;border-radius:14px;margin-bottom:16px}
+.titem a{color:var(--gold);font-weight:600;font-size:14px;text-decoration:none;display:inline-block;margin-top:10px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill h3{font-size:18px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+
+/* contact */
+.contact{background:radial-gradient(800px 400px at 50% 120%,rgba(255,138,61,.3),transparent 60%),var(--bg)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.social{display:flex;flex-direction:column;gap:14px;margin-top:20px}
+.social a{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--muted)}
+.social a:hover{color:var(--gold)}
+.social i{width:22px;color:var(--gold)}
+form{display:flex;flex-direction:column;gap:14px}
+input,textarea{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--text);font:inherit;font-size:15px}
+input:focus,textarea:focus{outline:none;border-color:var(--orange)}
+textarea{min-height:140px;resize:vertical}
+form button{border:0;cursor:pointer;align-self:flex-start}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
+
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero .wrap,.feat,.about .wrap,.contact .wrap{grid-template-columns:1fr}
+  .photo{max-width:340px;order:-1}
+  .grid,.skills{grid-template-columns:1fr}
+  .tgrid{grid-template-columns:1fr}
+  section{padding:72px 0}
+  .feat{padding:22px}
+}
+</style>
 </head>
 <body>
 
-<!-- HEADER SECTION -->
-<header>
-    <div class="container">
-        <!--💡UPDATE: Change to your name and title-->
-        <h1>Udo Mary Imeabasi</h1>
-        <p>Data Scientist | Machine Learning | Health Data &amp; Research</p>
-        <div class="social-links">
-            <!--💡UPDATE: Add your social media links and CV file-->
-            <a href="https://linkedin.com/in/udomary" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/MaryGit-24" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://medium.com/@imedatalabs" target="_blank" title="Medium"><i class="fab fa-medium-m fa-fw"></i></a>
-            <a href="assets/U.M._DS_CV.pdf" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
-        </div>
-    </div>
-</header>
-
-<!-- NAVIGATION -->
 <nav>
-    <div class="container">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+  <div class="wrap">
+    <a class="logo" href="#top">Mary <span>Udo</span></a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- ABOUT SECTION -->
-<section id="about" class="section">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <!--💡UPDATE: Change the image to your own profile photo in assets/images/-->
-            <img src="assets/images/Profile_Picture.jpg" alt="Udo Mary Imeabasi" class="profile-photo" style="max-width: 100%; height: auto;">
-            <div class="about-text">
-                <!--💡UPDATE: Write your own 'About Me' text here-->
-                <p>The day I understood that machine learning mirrors how I learn through patterns, iteration, and feedback was the day everything clicked and data stopped being abstract.</p>
-                <p>I’m a Data Scientist who uses data to solve real-world problems, not just analyze them. My work focuses on turning complex datasets into insights that drive decisions, improve systems, and uncover hidden patterns that matter.</p>
-                <p>From predicting patient no-shows in healthcare systems to building machine learning models for waste classification and sustainability, I approach every problem with curiosity, structure, and a strong bias for impact.</p>
-                <p>With a background in health and research, I bring a unique perspective to data, combining analytical thinking with real-world context. I don’t just ask what is happening, I ask why it matters and what can be done about it.</p>
-                <p>Beyond technical work, I’m actively involved in driving AI awareness and mentoring, helping others see possibilities in data just as I did.</p>
-                <p>I’m currently open to opportunities where I can apply data science to solve meaningful problems across industries, from healthcare to finance and beyond.</p>
-            </div>
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="badge">Lagos, Nigeria &middot; Women Techsters Fellow &rsquo;26</div>
+      <h1>Mary Imeabasi Udo</h1>
+      <div class="role">Data Scientist &amp; AI Engineer</div>
+      <p class="intro">I build machine learning and computer vision systems from real, messy data, and I teach young people how to do the same.</p>
+      <div class="motto"><span>Dare To Dream. Then Build It.</span></div>
+      <div class="btns">
+        <a class="btn primary" href="#work">See my work <i class="fas fa-arrow-down"></i></a>
+        <!-- CV: upload your new CV to assets/ with this exact name to replace the old one -->
+        <a class="btn ghost" href="assets/U.M._DS_CV.pdf" download><i class="fas fa-file-arrow-down"></i> Download CV</a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="assets/images/Profile_Picture.jpeg" alt="Mary Imeabasi Udo">
+    </div>
+  </div>
+</header>
+
+<!-- FEATURED PROJECT -->
+<section class="featured" id="work">
+  <div class="wrap">
+    <div class="kicker">Featured project</div>
+    <h2>Egocentric Dishwashing Segmentation</h2>
+    <p class="lead">The full data pipeline behind first person AI training data, built end to end from my own kitchen.</p>
+    <div class="feat">
+      <img src="https://raw.githubusercontent.com/MaryGit-24/egocentric-dishwashing-segmentation/main/results/sample_predictions.jpg" alt="Model outlining hands, dishes, sponge and basin in a first person kitchen video frame">
+      <div>
+        <h3>Teaching a model to see my hands at work</h3>
+        <p>I filmed myself washing dishes with a chest mounted phone, turned the video into 246 frames, labeled them with AI auto labeling, reviewed every frame by hand, and trained a YOLO26 segmentation model on the result.</p>
+        <div class="stats">
+          <div class="stat"><b>0.874</b><small>mask mAP50 on unseen frames</small></div>
+          <div class="stat"><b>246</b><small>frames reviewed by hand</small></div>
+          <div class="stat"><b>7 of 9</b><small>labeling errors caused by motion blur</small></div>
         </div>
-    </div>
-</section>
-
-<!-- PROJECTS SECTION -->
-<section id="projects" class="section">
-    <div class="container">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-
-            <!--💡UPDATE: Replace this with your own project. Add as many as you like!-->
-            <!-- Project 1 -->
-             <div class="project-card">
-                <!--💡UPDATE: Add a preview image of your project to assets/images/ -->
-                <img src="assets/images/H_Overview.png" alt="Healthcare Project Preview">
-                <div class="project-card-content">
-                    <h3>Healthcare Predictive Analytics &amp Patient Segmentation</h3>
-                    <p>Addressed high patient no-show rates and low appointment completion affecting hospital efficiency. Built predictive models and patient segmentation to identify at-risk patients and support data-driven scheduling strategies, improving resource utilization and care delivery planning.</p>
-                    <p><b>Tools: </b>Python, Scikit-learn, SQL, Power BI</p>
-                    <div class="project-buttons">
-                        <!--💡UPDATE: Add link to your project's code/documentation on GitHub-->
-                        <a href="https://github.com/MaryGit-24/healthcare-no-show-prediction-and-patient-segmentation" target="_blank" class="btn">Documentation</a>
-                        <!--💡UPDATE: Add link to your live dashboard (e.g., Power BI, Tableau Public)-->
-                        <a href="https://drive.google.com/file/d/1oTVWKHrvHAJoAtvlOmIowgl54abUct9j/view?usp=sharing" target="_blank" class="btn btn-secondary">View Presentation</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <img src="assets/images/predictions.png" alt="EcoReward Model Prediction Preview">
-                <div class="project-card-content">
-                    <h3>Waste Image Classification using CNN</h3>
-                    <p>Tackled inefficient waste sorting impacting recycling and sustainability efforts. Developed a CNN-based image classification model to automatically categorize waste types, enabling scalable, reward-driven waste management systems aligned with sustainable urban development goals.</p>
-                    <p><b>Tools: </b>Python, TensorFlow/Keras, CNN, Image Processing</p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/MaryGit-24/waste-image-classification-cnn/tree/main" target="_blank" class="btn">Documentation</a>
-                        <a href="https://github.com/MaryGit-24/waste-image-classification-cnn/tree/main/assets" target="_blank" class="btn btn-secondary">View Results</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="assets/images/CLV_Estimation.png" alt="SQL CLV Project">
-                <div class="project-card-content">
-                    <h3>Financial Data Analysis using SQL</h3>
-                    <p>Investigated customer activity and revenue patterns to support financial decision-making. Used SQL to identify inactive accounts, analyze transaction frequency, and estimate customer lifetime value, providing insights for customer retention and revenue optimization strategies.</p>
-                    <p><b>Tools: </b>MySQL</p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/MaryGit-24/Financial_Data_Analysis/tree/main" target="_blank" class="btn">Documentation</a>
-                        <a href="https://github.com/MaryGit-24/Financial_Data_Analysis/tree/main/assets" target="_blank" class="btn btn-secondary">View Results</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card">
-                <img src="assets/images/Dashboard.png" alt="Hypertension Management Dashboard Preview">
-                <div class="project-card-content">
-                    <h3>Clinical Decision Support Model for Hypertension Management</h3>
-                    <p>Built a healthcare predictive analytics model focused on identifying patients at risk of uncontrolled hypertension within a three-month period. Applied data cleaning, feature engineering, and machine learning techniques using a Random Forest Classifier with reproducible model configuration. The final model achieved an 80% recall score, supporting early-risk detection and data-driven healthcare decision-making.</p>
-                    <p><b>Tools: </b>Python, Random Forest Classifier, Power BI</p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/MaryGit-24/Clinical-Decision-Support-Model-for-Hypertension-Management/tree/main" target="_blank" class="btn">Documentation</a>
-                        <a href="https://drive.google.com/file/d/1PZ1aG1DxE72M4E3851FHBU7p37K2Z7J5/view?usp=sharing" target="_blank" class="btn btn-secondary">View Presentation</a>
-                    </div>
-                </div>
-            </div>
-
+        <div class="tags">
+          <span class="tag">YOLO26</span><span class="tag">Roboflow</span><span class="tag">SAM 3</span><span class="tag">Python</span><span class="tag">Google Colab</span>
         </div>
+        <a class="btn primary" href="https://github.com/MaryGit-24/egocentric-dishwashing-segmentation" target="_blank" rel="noopener"><i class="fab fa-github"></i> Read the full project</a>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- SKILLS SECTION -->
-<section id="skills" class="section">
-    <div class="container">
-        <h2>My Technical Skillset</h2>
-        <div class="skills-table">
-            
-            <!--💡UPDATE: Customize your skills in each category-->
-            <!-- Column 1: Data Visualization -->
-            <div class="skill-column">
-                <div class="skill-header">
-                    <i class="fas fa-cogs"></i>
-                    <h3>ML &amp Modeling</h3>
-                </div>
-                <ul class="skill-list">
-                    <li>Predictive Modeling</li>
-                    <li>Classification Models</li>
-                    <li>Clustering (K-Means)</li>
-                    <li>Model Evaluation</li>
-                    <li>Hyperparameter Tuning</li>
-                </ul>
-            </div>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="kicker">Selected work</div>
+    <h2>Health data and machine learning</h2>
+    <p class="lead">My background is in health education, so I care most about models a clinic or a care team could actually act on.</p>
+    <div class="grid">
 
-            <!-- Column 2: Data Analysis -->
-            <div class="skill-column">
-                <div class="skill-header">
-                    <i class="fas fa-search-plus"></i>
-                    <h3>Data Analysis</h3>
-                </div>
-                <ul class="skill-list">
-                    <li>Python (Pandas, NumPy)</li>
-                    <li>SQL</li>
-                    <li>Exploratory Data Analysis</li>
-                    <li>Statistical Analysis</li>
-                    <li>A/B Testing</li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Data Modeling & ETL -->
-            <div class="skill-column">
-                <div class="skill-header">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>Data Processing &amp BI</h3>
-                </div>
-                <ul class="skill-list">
-                    <li>Data Cleaning</li>
-                    <li>Feature Engineering</li>
-                    <li>Data Transformation</li>
-                    <li>Power BI & Dashboards</li>
-                    <li>Data Storytelling</li>
-                </ul>
-            </div>
-
+      <div class="card">
+        <img src="assets/images/Dashboard.png" alt="Hypertension clinical outcome dashboard">
+        <div class="body">
+          <div class="cat">Clinical ML</div>
+          <h3>Clinical Decision Support for Hypertension</h3>
+          <p>Flags patients unlikely to reach blood pressure control within three months, using data from 350 patients in a physician's open data challenge.</p>
+          <div class="result">A simple three factor risk score split patients from 36.5% control down to 0%.</div>
+          <div class="links">
+            <a href="https://github.com/MaryGit-24/Clinical-Decision-Support-Model-for-Hypertension-Management" target="_blank" rel="noopener">GitHub <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/images/H_Overview.png" alt="Healthcare appointments Power BI dashboard">
+        <div class="body">
+          <div class="cat">Prediction &amp; BI</div>
+          <h3>Patient No-Show Prediction &amp; Segmentation</h3>
+          <p>End to end analysis of 20,000+ appointments: a Power BI dashboard, a Random Forest no-show model and K-Means patient personas.</p>
+          <div class="result">Caught about 80% of no-shows and flagged 3,300+ high risk appointments.</div>
+          <div class="links">
+            <a href="https://github.com/MaryGit-24/healthcare-no-show-prediction-and-patient-segmentation" target="_blank" rel="noopener">GitHub <i class="fas fa-arrow-right"></i></a>
+            <a href="https://drive.google.com/file/d/1oTVWKHrvHAJoAtvlOmIowgl54abUct9j/view?usp=sharing" target="_blank" rel="noopener">Presentation <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/images/predictions.png" alt="Waste classification model predictions">
+        <div class="body">
+          <div class="cat">Computer vision</div>
+          <h3>EcoReward Waste Classifier</h3>
+          <p>A CNN that sorts waste photos into glass, metal, paper and plastic, built to approve or flag submissions for a recycling reward app. My first model, with data I sourced myself.</p>
+          <div class="result">81% validation accuracy from about 80 images per class.</div>
+          <div class="links">
+            <a href="https://github.com/MaryGit-24/waste-image-classification-cnn" target="_blank" rel="noopener">GitHub <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD LATER: a card for the NECA ICT computer vision course repo once it is on GitHub -->
+
     </div>
+    <p class="more">More work, including SQL customer and financial analysis, is on <a href="https://github.com/MaryGit-24" target="_blank" rel="noopener">my GitHub</a>.</p>
+  </div>
 </section>
 
-<!-- CONTACT FORM SECTION -->
-<section id="contact" class="section">
-    <div class="container">
-        <h2>Send me a message</h2>
-        
-        <!--💡UPDATE: Go to formsubmit.co and replace the email with your own-->
-        <form action="https://formsubmit.co/udomary963@gmail.com" method="POST" class="contact-form">
-            <p> Interested in collaborating or have questions about my work? I'd love to hear from you!</p>
-
-            <!-- Form Fields -->
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Your email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="6" placeholder="Your message" required></textarea>
-            </div>
-            
-            <!-- Submit Button -->
-            <button type="submit" class="btn">Send Message</button>
-
-        </form>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <div class="kicker">About me</div>
+      <blockquote>Machine learning learns the way I do: patterns, practice, feedback. That is when data stopped being abstract for me.</blockquote>
     </div>
+    <div>
+      <p>I studied <strong>Health Education</strong> at Ambrose Alli University, found my way into tech through the <strong>Women Techsters Fellowship</strong> by Tech4Dev, and never looked back. Since then I have trained in machine learning with MIT Universal AI and in computer vision at NECA ICT.</p>
+      <p>By day I am a <strong>Quantitative Insights Researcher</strong>, designing questionnaires, checking field data and turning it into reports clients act on. Through <strong>SME Ally</strong>, I build data and AI tools for small businesses: a data solution when the problem is data, an AI tool when the work is repetitive.</p>
+      <p>My faith guides all of it. And the part I love most is teaching.</p>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <!--💡UPDATE: Change the year and your name-->
-        <p>&copy; 2026 Udo Mary Imeabasi. All rights reserved.</p>
+<!-- TEACHING -->
+<section class="teaching" id="teaching">
+  <div class="wrap">
+    <div class="kicker">Teaching &amp; community</div>
+    <h2>Opening the door to AI</h2>
+    <p class="lead">I want children to meet AI early, and not only the ones at the top of the class. Thinking like a builder is a skill, and it can be taught.</p>
+    <div class="tgrid">
+      <div class="titem">
+        <i class="fas fa-eye"></i>
+        <h3>Intro to computer vision for children</h3>
+        <p>Taught the children in my church how computers learn to see, with hands on examples. Their questions were sharper than I expected.</p>
+        <!-- SLIDES: upload the PDF to assets/slides/ with this exact name -->
+        <a href="assets/slides/intro-to-computer-vision.pdf" target="_blank" rel="noopener">View my slides <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="titem">
+        <i class="fas fa-school"></i>
+        <h3>Intro to AI for primary schools</h3>
+        <p>Led the AI session at a larger outreach for primary school pupils from neighbouring schools: what AI is, and where they already meet it.</p>
+        <!-- SLIDES: upload the PDF to assets/slides/ with this exact name -->
+        <a href="assets/slides/intro-to-ai.pdf" target="_blank" rel="noopener">View my slides <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="titem">
+        <!-- PHOTO: upload tech4dev-outreach.jpg to assets/images/ -->
+        <img src="assets/images/tech4dev-outreach.jpg" alt="Mary mentoring secondary school students at a Tech4Dev school visit">
+        <h3>Tech4Dev school outreach</h3>
+        <p>Visited secondary schools with Tech4Dev for the Girl Tech drive in October 2025, and mentored students for a tech competition.</p>
+      </div>
+      <div class="titem">
+        <i class="fas fa-seedling"></i>
+        <h3>Dare To Dream</h3>
+        <p>My call to young people: start thinking about your path now. The choices you make today shape what you build tomorrow.</p>
+      </div>
     </div>
-</footer>
+  </div>
+</section>
 
-<script src="assets/js/main.js"></script>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="kicker">Toolkit</div>
+    <h2>What I work with</h2>
+    <p class="lead">Grouped by what each tool helps me do.</p>
+    <div class="skills">
+      <div class="skill"><h3>Machine learning &amp; vision</h3><div class="chips"><span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">TensorFlow / Keras</span><span class="chip">YOLO (Ultralytics)</span><span class="chip">Roboflow</span><span class="chip">Instance segmentation</span></div></div>
+      <div class="skill"><h3>Data &amp; analysis</h3><div class="chips"><span class="chip">SQL</span><span class="chip">Pandas</span><span class="chip">Power BI</span><span class="chip">Data visualization</span><span class="chip">Feature engineering</span></div></div>
+      <div class="skill"><h3>Research &amp; data quality</h3><div class="chips"><span class="chip">Questionnaire design</span><span class="chip">Field data QA</span><span class="chip">Annotation review</span><span class="chip">Report writing</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Contact</div>
+      <h2>Let's build something</h2>
+      <p class="lead" style="margin-bottom:0">Open to roles and collaborations in data, AI and AI education.</p>
+      <div class="social">
+        <a href="mailto:udomary963@gmail.com"><i class="fas fa-envelope"></i> udomary963@gmail.com</a>
+        <a href="https://linkedin.com/in/udomary" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> linkedin.com/in/udomary</a>
+        <a href="https://github.com/MaryGit-24" target="_blank" rel="noopener"><i class="fab fa-github"></i> github.com/MaryGit-24</a>
+        <a href="https://medium.com/@imedatalabs" target="_blank" rel="noopener"><i class="fab fa-medium"></i> My tech journey on Medium</a>
+      </div>
+    </div>
+    <form action="https://formsubmit.co/udomary963@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from your portfolio">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn primary">Send message <i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+</section>
+
+<footer>&copy; 2026 Mary Imeabasi Udo &middot; Dare To Dream. Then Build It.</footer>
 
 </body>
 </html>
